@@ -7,9 +7,9 @@ const Sidebar = () => {
       <h1 className="text-2xl font-bold mb-6">YouTube Clone</h1>
       <nav className="space-y-4">
         <NavLink
-          to="/"
+          to="/home"
           className={({ isActive }) =>
-            `block py-2 px-4 rounded-md ${isActive ? "bg-blue-500" : "hover:bg-gray-700"}`
+            `block py-2 px-4 rounded-md ${isActive ? "bg-slate-700" : "hover:bg-gray-700"}`
           }
         >
           Home
@@ -17,18 +17,34 @@ const Sidebar = () => {
         <NavLink
           to="/trending"
           className={({ isActive }) =>
-            `block py-2 px-4 rounded-md ${isActive ? "bg-blue-500" : "hover:bg-gray-700"}`
+            `block py-2 px-4 rounded-md ${isActive ? "bg-slate-700" : "hover:bg-gray-700"}`
           }
         >
           Trending
         </NavLink>
         <NavLink
-          to="/subscriptions"
+          to="/subscribtions"
           className={({ isActive }) =>
-            `block py-2 px-4 rounded-md ${isActive ? "bg-blue-500" : "hover:bg-gray-700"}`
+            `block py-2 px-4 rounded-md ${isActive ? "bg-slate-700" : "hover:bg-gray-700"}`
           }
         >
           Subscriptions
+        </NavLink>
+        <NavLink
+          to="/video"
+          className={({ isActive }) =>
+            `block py-2 px-4 rounded-md ${isActive ? "bg-slate-700" : "hover:bg-gray-700"}`
+          }
+        >
+          Video
+        </NavLink>
+        <NavLink
+          to="/channel"
+          className={({ isActive }) =>
+            `block py-2 px-4 rounded-md ${isActive ? "bg-slate-700" : "hover:bg-gray-700"}`
+          }
+        >
+          Channel
         </NavLink>
       </nav>
     </div>
