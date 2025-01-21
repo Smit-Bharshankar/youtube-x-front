@@ -9,7 +9,11 @@ import Video from "./components/Home/Video";
 import { RiMenuFoldLine , RiMenuUnfoldLine } from "react-icons/ri";
 import Navbar from "./components/Home/Navbar";
 import Trending from "./components/Trending/Trending";
-import Subscribtions from "./components/Subscribtions/Subscribtions";
+import Subscriptions from "./components/Subscriptions/Subscriptions";
+import Explore from "./components/Explore/Explore";
+import Library from "./components/Library/Library";
+import History from "./components/History/History";
+import Shorts from "./components/Shorts/Shorts";
 
 
 function App() {
@@ -31,7 +35,7 @@ function App() {
       {/* Main Content */}
       <div className="flex-1">
         {/* Toggle Button */}
-        <div className="">  
+        <div className="p-5 static  bg-gray-600 shadow-md">  
           {/* p-4 static  bg-gray-100 shadow-md |> for above className */}
           <button
             onClick={toggleSidebar}
@@ -85,6 +89,24 @@ function App() {
           />
 
           <Route
+            path="/shorts"
+            element={
+              <LayoutWithSidebar>
+                <Shorts />
+              </LayoutWithSidebar>
+            }
+          />
+
+          <Route
+            path="/explore"
+            element={
+              <LayoutWithSidebar>
+                <Explore />
+              </LayoutWithSidebar>
+            }
+          />
+
+          <Route
             path="/trending"
             element={
               <LayoutWithSidebar>
@@ -94,23 +116,31 @@ function App() {
           />
 
           <Route
-            path="/subscribtions"
+            path="/subscriptions"
             element={
               <LayoutWithSidebar>
-                <Subscribtions />
+                <Subscriptions />
               </LayoutWithSidebar>
             }
           />
 
-          {/* <Route
-            path="/video"
+          <Route
+            path="/library"
             element={
               <LayoutWithSidebar>
-                <Video />
+                <Library />
               </LayoutWithSidebar>
             }
-          /> */}
+          />
 
+          <Route
+            path="/history"
+            element={
+              <LayoutWithSidebar>
+                <History />
+              </LayoutWithSidebar>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

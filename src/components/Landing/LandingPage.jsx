@@ -1,7 +1,9 @@
 import React from "react";
 import youtube from '../../assets/youtube.jpg'
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center">
       {/* Container */}
@@ -15,7 +17,8 @@ const LandingPage = () => {
             Explore endless videos, upload your own, and connect with a global
             audience. Your next favorite video is just a click away.
           </p>
-          <button className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-lg font-medium">
+          <button onClick={() => navigate('/home')} 
+          className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-lg font-medium">
             Explore Now
           </button>
         </div>
