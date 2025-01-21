@@ -17,7 +17,8 @@ import { SiYoutubeshorts } from "react-icons/si";
 
 const Sidebar = () => {
   return (
-    <div className="w-64 bg-gray-800 text-white h-dvh p-4">
+    // h-100% for screen with filled content / use or dont use h-full
+    <div className="w-64 bg-gray-800 text-white h-100% p-4">
       <h1 className="text-2xl font-bold mb-6">YouTube Clone</h1>
       <nav className="space-y-4">
         

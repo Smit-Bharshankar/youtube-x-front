@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Display from "./components/Landing/Display";
 import Home from "./components/Home/Home";
-import Sidebar from "./components/Home/Sidebar";
-import Channel from "./components/Home/Channel";
-import Video from "./components/Home/Video";
+import Sidebar from "./components/Pages/Sidebar";
+import Channel from "./components/Channel/Channel";
+import Video from "./components/YourVideos/YourVideo";
 import { RiMenuFoldLine , RiMenuUnfoldLine } from "react-icons/ri";
-import Navbar from "./components/Home/Navbar";
+import Navbar from "./components/Pages/Navbar";
 import Trending from "./components/Trending/Trending";
 import Subscriptions from "./components/Subscriptions/Subscriptions";
 import Explore from "./components/Explore/Explore";
@@ -45,8 +45,8 @@ function App() {
           </button>
         </div>
 
-        {/* Render children */}
-        <div className="p-4">{children}</div>
+        {/* Render children::  h-100% or remove it or h-full */}
+        <div className="p-4 bg-primarybg h-100%">{children}</div>
       </div>
     </div>
     </>

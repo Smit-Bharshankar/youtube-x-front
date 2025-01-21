@@ -25,7 +25,14 @@ const Navbar = () => {
       {/* <div>2</div> */}
       <div className='flex gap-4 items-center justify-center'>
       <FaRegBell className='size-5 text-white'/>
-      <CgProfile className='size-7 text-slate-400 bg-transparent' />
+
+      <div className="flex items-center space-x-3 ">
+                <img
+                  src="https://i.ytimg.com/vi/iACJOc5gZXo/mqdefault.jpg"
+                  alt={<CgProfile className='size-7 text-slate-400 bg-transparent' />}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                </div>
       </div>
 
       </div>
